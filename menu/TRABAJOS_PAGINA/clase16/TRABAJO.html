@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>trabajo</title>
+
+<script src="http://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.8.1.min.js"></script>
+<script src="EJERCICIO_1.js"></script>
+
+
+<script src="EJERCICIO_2.js">
+</script>
+
+
+<script src="EJERCICIO_3.js"></script>
+
+<script src="EJERCICIO_4.js"></script>
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas1");
+	exportRoot = new lib.EJERCICIO_1();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+
+
+	 canvas = document.getElementById("canvas2");
+	exportRoot = new lib.EJERCICIO_2();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+
+
+	 canvas = document.getElementById("canvas3");
+	exportRoot = new lib.EJERCICIO_3();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+
+
+
+	 canvas = document.getElementById("canvas4");
+	exportRoot = new lib.EJERCICIO_4();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+</script>
+
+</head>
+<body onload="init();" style="background-color:#D4D4D4" >
+<table align="center">
+	<tr>
+	<td >
+
+	<center><canvas id="canvas1" width="550" height="400" style="background-color:#FFFFFF"></canvas>
+		
+		</td>
+
+		<td >
+           <center><canvas id="canvas2" width="550" height="400" style="background-color:#00FF33"></canvas>
+		</td>
+	</tr>
+	<tr>
+	<td>
+		<CENTER><canvas id="canvas3" width="550" height="400" style="background-color:#FFFFFF"></canvas>
+	</td>
+     <td>
+		<center><canvas id="canvas4" width="550" height="400" style="background-color:#FFFFFF"></canvas>
+	</td>
+
+	</tr>
+
+
+</table>
+
+</body>
+</html>
